@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Te amo</title>
+<title>Para mi hermosa ❤️</title>
 
 <style>
     * {
@@ -18,40 +18,63 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        overflow: hidden;
-        background: radial-gradient(circle, #a00020, #3b0009);
-        font-family: Arial, sans-serif;
+        background: #000000;
+        font-family: Georgia, serif;
+        overflow-x: hidden;
+        padding: 30px 10px;
     }
 
     .contenedor {
         text-align: center;
-        padding: 20px;
+        width: 100%;
+        max-width: 600px;
     }
 
     h1 {
-        color: #fff0f3;
-        font-size: clamp(25px, 5vw, 42px);
-        margin-bottom: 30px;
-        text-shadow: 0 0 15px #ff1744;
+        color: #ff1744;
+        font-size: clamp(27px, 5vw, 42px);
+        margin-bottom: 20px;
+        text-shadow: 0 0 15px #ff003c;
         animation: latido 1.5s infinite;
     }
 
     .corazon {
-        width: min(90vw, 500px);
-        height: min(75vw, 420px);
-        overflow: hidden;
-        filter: drop-shadow(0 0 15px #ff1744);
+        width: min(95vw, 500px);
+        height: min(80vw, 420px);
+        margin: 0 auto;
+        filter: drop-shadow(0 0 12px #ff003c);
     }
 
     .palabras {
         color: #ff1744;
-        font-size: clamp(11px, 2vw, 16px);
+        font-family: Arial, sans-serif;
+        font-size: 15px;
         font-weight: bold;
         line-height: 1.15;
         overflow-wrap: anywhere;
-        word-spacing: 5px;
-        text-shadow: 0 0 5px #ff8a9e;
+        text-shadow: 0 0 5px #ff1744;
         animation: brillo 2s infinite alternate;
+    }
+
+    .mensaje {
+        color: #ffffff;
+        font-size: clamp(17px, 4vw, 23px);
+        line-height: 1.7;
+        margin: 20px auto;
+        max-width: 500px;
+        text-shadow: 0 0 8px #ff1744;
+    }
+
+    .mensaje span {
+        color: #ff1744;
+        font-weight: bold;
+    }
+
+    .decoracion {
+        color: #ff1744;
+        font-size: 25px;
+        margin-top: 12px;
+        letter-spacing: 8px;
     }
 
     @keyframes latido {
@@ -61,21 +84,19 @@
 
     @keyframes brillo {
         from { opacity: 0.7; }
-        to { opacity: 1; text-shadow: 0 0 12px #ff8a9e; }
-    }
-
-    .mensaje {
-        color: #ffdce3;
-        margin-top: 25px;
-        font-size: 18px;
-        letter-spacing: 2px;
+        to {
+            opacity: 1;
+            text-shadow: 0 0 12px #ff1744;
+        }
     }
 </style>
 </head>
 
 <body>
+
 <div class="contenedor">
-    <h1>Para ti, amor. La palabra pesa menos que mi sentimiento</h1>
+
+    <h1>Para ti, mi hermosa ❤️</h1>
 
     <div class="corazon">
         <svg viewBox="0 0 500 420"
@@ -101,18 +122,37 @@
         </svg>
     </div>
 
-    <p class="mensaje">Te amo más de lo que imaginas 💖</p>
+    <p class="mensaje">
+        La palabra pesa menos que mi sentimiento,
+        gracias por estos <span>2 meses</span>, hermosa.
+        <br />
+        <span>Te amo más de lo que las palabras pueden expresar. ❤️</span>
+    </p>
+
+    <div class="decoracion">♥ ♥ ♥</div>
+
 </div>
 
 <script>
     const idiomas = [
-        "TE AMO", "I LOVE YOU", "JE T'AIME",
-        "TI AMO", "ICH LIEBE DICH", "愛してる",
-        "사랑해", "EU TE AMO", "Я ТЕБЯ ЛЮБЛЮ",
-        "TE QUIERO", "ILY", "MON AMOUR",
-        "AISHITERU", "SARANGHAE", "LOVE YOU",
-        "WO AI NI", "ANA BAHEBAK", "IK HOU VAN JOU",
-        "TE AMO", "I LOVE YOU", "JE T'AIME"
+        "TE AMO",
+        "I LOVE YOU",
+        "JE T'AIME",
+        "TI AMO",
+        "ICH LIEBE DICH",
+        "愛してる",
+        "사랑해",
+        "EU TE AMO",
+        "Я ТЕБЯ ЛЮБЛЮ",
+        "TE QUIERO",
+        "MON AMOUR",
+        "SARANGHAE",
+        "WO AI NI",
+        "ANA BAHEBAK",
+        "IK HOU VAN JOU",
+        "I LOVE YOU",
+        "TE AMO",
+        "JE T'AIME"
     ];
 
     const texto = document.getElementById("texto");
@@ -122,11 +162,13 @@
 
         for (let j = 0; j < 5; j++) {
             linea.textContent +=
-                idiomas[Math.floor(Math.random() * idiomas.length)] + " ♥ ";
+                idiomas[Math.floor(Math.random() * idiomas.length)]
+                + " ♥ ";
         }
 
         texto.appendChild(linea);
     }
 </script>
+
 </body>
 </html>
